@@ -46,6 +46,59 @@
                 document.getElementById("ifOpticalFibre").style.display = "none";
             }
         }
+
+        function activeAssetNameCheck(that) {
+            if(that.value == "switches") {
+                document.getElementById("ifSwitches").style.display = "block";
+            } else {
+                document.getElementById("ifSwitches").style.display = "none";
+            }
+            if(that.value == "server") {
+                document.getElementById("ifServer").style.display = "block";
+            } else {
+                document.getElementById("ifServer").style.display = "none";
+            }
+            if(that.value == "wireless-controller") {
+                document.getElementById("ifWirelessController").style.display = "block";
+            } else {
+                document.getElementById("ifWirelessController").style.display = "none";
+            }
+            if(that.value == "wireless-ap") {
+                document.getElementById("ifWirelessAP").style.display = "block";
+            } else {
+                document.getElementById("ifWirelessAP").style.display = "none";
+            }
+            if(that.value == "firewall") {
+                document.getElementById("ifFirewall").style.display = "block";
+            } else {
+                document.getElementById("ifFirewall").style.display = "none";
+            }
+            if(that.value == "ise") {
+                document.getElementById("ifISE").style.display = "block";
+            } else {
+                document.getElementById("ifISE").style.display = "none";
+            }
+            if(that.value == "nms") {
+                document.getElementById("ifNMS").style.display = "block";
+            } else {
+                document.getElementById("ifNMS").style.display = "none";
+            }
+            if(that.value == "printer") {
+                document.getElementById("ifPrinter").style.display = "block";
+            } else {
+                document.getElementById("ifPrinter").style.display = "none";
+            }
+            if(that.value == "projector") {
+                document.getElementById("ifWProjector").style.display = "block";
+            } else {
+                document.getElementById("ifProjector").style.display = "none";
+            }
+            if(that.value == "ups") {
+                document.getElementById("ifUPS").style.display = "block";
+            } else {
+                document.getElementById("ifUPS").style.display = "none";
+            }
+        }
     </script>    
     
     <title>IT Services</title>
@@ -73,42 +126,227 @@
           <!-- to display if Active is selected -->
           <div id="ifActive" style="display:none;">
                 <div class="form-group">
-                        <label class="control-label col-sm-2" for="name-active">Enter name of Asset:</label>
+                        <label class="control-label col-sm-2" for="name-active">Select name of Asset:</label>
                         <div class="col-sm-10">          
-                          <input type="text" class="form-control" id="name-active" placeholder="Switches/ Server/ Wireless Controller/ ..." name="name-active">
+                          <!-- <input type="text" class="form-control" id="name-active" placeholder="Switches/ Server/ Wireless Controller/ ..." name="name-active"> -->
+                             <select class="form-control" onChange="activeAssetNameCheck(this);" >
+                                <option value="" disabled selected>Select your option</option>
+                                <option value = "server">Server</option>
+                                <option value = "switches">Switches</option>
+                                <option value = "wireless-controller">Wireless Controller</option>
+                                <option value="wireless-ap">Wireless AP</option>
+                                <option value="firewall">Firewall</option>
+                                <option value="ise">Identity Service Engine</option>
+                                <option value="nms">Network Management System</option>
+                                <option value="printer">Printer</option>
+                                <option value="projector">Projector</option>
+                                <option value="ups">UPS</option>
+                              </select>
                         </div>
                 </div>
-            <div class = "form-group">
-                    <label class = "control-label col-sm-2" for="make">Enter Make of the Asset: </label>
-                    <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="make-active" placeholder="Make" name="make-active">
+                
+                <!-- MAKE (make-active) | MODEL (model-active) | TYPE (type-active) | FUNCTIONALITY (function-active) | REMARKS (remarks-active) -->
+
+            <!-- to display if switches is selected -->
+            <div id = "ifSwitches" style = "display:none;">
+                <div class = "form-group">
+                    <label for="type-active" class ="control-label col-sm-2">Ports: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "type-active" placeholder="8/16/24/48 ..." name="type-active">
                     </div>
-            </div>
-            <div class = "form-group">
-                    <label class = "control-label col-sm-2" for="model">Enter Model of the Asset: </label>
-                    <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="model-active" placeholder="Model" name="model-active">
+                </div>
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Cisco/Juniper/HP ..." name="make-active">
                     </div>
+                </div>
             </div>
-            <div class = "form-group">
-                <!-- TODO: Change label according to name-asset -->
-                    <label class = "control-label col-sm-2" for="type">Enter Type of the asset:</label>
-                    <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="type-active" placeholder="Type" name="type-active">
+            <!-- to display if server is selected -->
+            <div id = "ifServer" style = "display:none;">
+                <div class = "form-group">
+                    <label for="type-active" class ="control-label col-sm-2">Type: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "type-active" placeholder="Rack/ Tower ..." name="type-active">
                     </div>
-            </div>
-            <div class = "form-group">
-                    <label class = "control-label col-sm-2" for="functionality">Enter Functionality of the asset:</label>
-                    <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="function-active" placeholder="Functionality" name="function-active">
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter model number" name="model-active">
                     </div>
-            </div>            
-            <div class = "form-group">
-                    <label class ="control-label col-sm-2" for="remarks">Remarks:</label>
-                    <!-- <textarea class="form-control" rows="5" id="remarks"></textarea> -->
-                    <input class="form-control input-lg" id="remarks-active" type="text">
+                </div>
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make of the server" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="function-active" class ="control-label col-sm-2">Generation: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "function-active" placeholder="Enter generation" name="function-active">
+                    </div>
+                </div>
             </div>
-          </div>          
+            <!-- to display if wireless-controller is selected -->
+            <div id="ifWirelessController" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Model" name="model-active">
+                    </div>
+                </div>
+            </div>
+            <!-- to display if wireless-ap is selected -->
+            <div id="ifWirelessAP" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter Model" name="model-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="type-active" class ="control-label col-sm-2">Type: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "type-active" placeholder="Indoor/ Outdoor ... " name="type-active">
+                    </div>
+                </div>
+            </div>
+            <!-- to display if firewall is selected -->
+            <div id = "ifFirewall" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter Model" name="model-active">
+                    </div>
+                </div>
+            </div>
+            <!-- to display if ise is selected -->
+            <div id = "ifISE" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter Model" name="model-active">
+                    </div>
+                </div>
+            </div>
+            <!-- to display if nms is selected -->
+            <div id = "ifNMS" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter Model" name="model-active">
+                    </div>
+                </div>
+            </div>
+            <!-- to display if printer is selected -->
+            <div id = "ifPrinter" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter Model" name="model-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="type-active" class ="control-label col-sm-2">Type: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "type-active" placeholder="Mono/ Color" name="type-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="type-active" class ="control-label col-sm-2">Additional Functionality: </label>
+                    <div class = "col-sm-10">
+                        <!-- <input type="text" class = "form-control" id = "type-active" placeholder="Indoor/ Outdoor ... " name="type-active"> -->
+                        <select class="form-control" id = "type-active">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value = "fax">Fax</option>
+                            <option value = "scan">Scan</option>
+                            <option value = "faxAndScan">Fax + Scan</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-- to display if projector is selected -->
+            <div id="ifProjector" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter Model" name="model-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="type-active" class ="control-label col-sm-2">Type: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "type-active" placeholder="DLP/Lamp/LED ... " name="type-active">
+                    </div>
+                </div>
+            </div>
+            <!-- to display if ups is selected -->
+            <div id = "ifUPS" style="display: none;">
+                <div class = "form-group">
+                    <label for="make-active" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-active" placeholder="Enter make" name="make-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="model-active" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-active" placeholder="Enter Model" name="model-active">
+                    </div>
+                </div>
+                <div class = "form-group">
+                    <label for="type-active" class ="control-label col-sm-2">Capacity: </label>
+                    <div class = "col-sm-10">
+                        <input type="number" class = "form-control" id = "type-active" placeholder="Rating(in VA)" name="type-active">
+                    </div>
+                </div>
+            </div>
+
+            </div>          
 
           <!-- to display if active-computers is selected -->
           <div id = "ifComputers" style = "display:none;">
