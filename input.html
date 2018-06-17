@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type = "text/javascript">
+        function activePassiveCheck(that) {
+            if (that.value == "active") {
+                document.getElementById("ifActive").style.display = "block";
+            } else {
+                document.getElementById("ifActive").style.display = "none";
+            }
+            if(that.value == "passive") {
+                document.getElementById("ifPassive").style.display = "block";
+            } else {
+                document.getElementById("ifPassive").style.display = "none";
+            }
+            if(that.value == "active-computers") {
+                document.getElementById("ifComputers").style.display = "block";
+            } else {
+                document.getElementById("ifComputers").style.display = "none";
+            }
+        }
+
+        function passiveTypeCheck(that) {
+            if(that.value == "cables") {
+                document.getElementById("ifCables").style.display = "block";
+            } else {
+                document.getElementById("ifCables").style.display = "none";
+            }
+            if (that.value == "hardware") {
+                document.getElementById("ifHardware").style.display = "block";
+            } else {
+                document.getElementById("ifHardware").style.display = "none";
+            }
+        }
+
+        function cableType(that) {
+            if(that.value == "optical-fibre") {
+                document.getElementById("ifOpticalFibre").style.display = "block";
+            } else {
+                document.getElementById("ifOpticalFibre").style.display = "none";
+            }
+        }
+    </script>    
+    
+    <title>IT Services</title>
+
+</head>
+<body>
+    <div class="container">
+        <h2>IT Services - Non Consumable Fixed Asset</h2>
+        <h2>New Inventory Item Form</h2>
+        <br>
+        <form class="form-horizontal" action="">
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="asset-type">Select type of asset: </label>
+            <div class="col-sm-10">
+                <select class="form-control" onChange="activePassiveCheck(this);" >
+                    <option value="" disabled selected>Select your option</option>
+                    <option value = "active">Active</option>
+                    <option value = "active-computers">Active-Computers</option>
+                    <option value = "passive">Passive</option>
+                  </select>
+            </div>
+          </div>
+          
+
+          <!-- to display if Active is selected -->
+          <div id="ifActive" style="display:none;">
+                <div class="form-group">
+                        <label class="control-label col-sm-2" for="name-active">Enter name of Asset:</label>
+                        <div class="col-sm-10">          
+                          <input type="text" class="form-control" id="name-active" placeholder="Enter name" name="name-active">
+                        </div>
+                </div>
+            <div class = "form-group">
+                    <label class = "control-label col-sm-2" for="make">Enter Make of the Asset: </label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="make-active" placeholder="Make" name="make-active">
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label class = "control-label col-sm-2" for="model">Enter Model of the Asset: </label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="model-active" placeholder="Model" name="model-active">
+                    </div>
+            </div>
+            <div class = "form-group">
+                <!-- TODO: Change label according to name-asset -->
+                    <label class = "control-label col-sm-2" for="type">Enter Type of the asset:</label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="type-active" placeholder="Type" name="type-active">
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label class = "control-label col-sm-2" for="functionality">Enter Functionality of the asset:</label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="function-active" placeholder="Functionality" name="function-active">
+                    </div>
+            </div>            
+            <div class = "form-group">
+                    <label class ="control-label col-sm-2" for="remarks">Remarks:</label>
+                    <!-- <textarea class="form-control" rows="5" id="remarks"></textarea> -->
+                    <input class="form-control input-lg" id="remarks-active" type="text">
+            </div>
+          </div>          
+
+          <!-- to display if active-computers is selected -->
+          <div id = "ifComputers" style = "display:none;">
+            <div class = "form-group">
+                <label for="type-computers" class ="control-label col-sm-2">Type: </label>
+                <div class = "col-sm-10">
+                    <input type="text" class = "form-control" id = "type-computers" placeholder="laptop/Desktop ..." name="type-computers">
+                </div>
+            </div>
+            <div class = "form-group">
+                    <label for="form-computers" class ="control-label col-sm-2">Form Factor: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "form-computers" placeholder="SFF/BTX/ITX ..." name="form-computers">
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label for="model-computers" class ="control-label col-sm-2">Model: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "model-computers" placeholder="Model Number" name="model-computers">
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label for="make-computers" class ="control-label col-sm-2">Make: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "make-computers" placeholder="Make" name="type-computers">
+                    </div>
+            </div>
+            <div class="form-group">
+                    <span class="col-md-2 control-label"><b>Processor: </b></span>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label for="processor-gen-computers" class="col-md-1 control-label">Gen: </label>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control" id="processor-gen-computers" placeholder="i3/i7 ... ">
+                            </div>
+                            <label for="processor-speed-computers" class="col-md-1 control-label">Speed: </label>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control" id="processor-speed-computers" placeholder="3.3Ghz ...">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label for="ram-computers" class ="control-label col-sm-2">RAM: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "ram-computers" placeholder="RAM" name="ram-computers">
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label for="hdd-computers" class ="control-label col-sm-2">Hard Disk: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "hdd-computers" placeholder="HDD" name="hdd-computers">
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label for="monitor-computers" class ="control-label col-sm-2">Monitor Size: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "monitor-computers" placeholder="Monitor Size" name="monitor-computers">
+                    </div>
+            </div>
+            <div class = "form-group">
+                    <label for="os-computers" class ="control-label col-sm-2">Operating System: </label>
+                    <div class = "col-sm-10">
+                        <input type="text" class = "form-control" id = "os-computers" placeholder="WindowsXP/ Windows10/ Ubuntu18.04 ..." name="os-computers">
+                    </div>
+            </div>
+          </div>
+
+
+          <!-- to display if Passive is selected -->
+          <div id="ifPassive" style="display:none;">
+                <div class="form-group">
+                        <label class="control-label col-sm-2" for="name-passive">Select name of Asset:</label>
+                        <div class="col-sm-10">
+                                <select class="form-control" onChange="passiveTypeCheck(this);" >
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value = "cables">Cables</option>
+                                    <option value = "hardware">Hardware</option>
+                                  </select>
+                        </div>
+                </div>
+          
+
+          <!-- to display if cables is selected -->
+          <div id = "ifCables" style="display:none;">
+              <div class = "form-group">
+                    <label class = "control-label col-sm-2" for="type-cable"> Select type of Cable: </label>
+                    <div class="col-sm-10">
+                        <select class="form-control" onChange="cableType(this);">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="optical-fibre">Optical Fibre (Outdoor cable)</option>
+                            <option value="pigtail">Pigtail Cable</option>
+                            <option value="ethernet">Ethernet Cable</option>
+                            <option value="patch-cord">Patch Cord</option>
+                            <option value="computer-cable">Computer Cable</option>
+                            <option value="audio-video">Audio/Video Cable</option>
+                        </select>
+                    </div>
+              </div>
+              <div class = "form-group">
+                <label class="control-label col-sm-2" for="length-cable">Length: </label>
+                <div class="col-sm-10">          
+                    <input type="text" class="form-control" id="length-cable" placeholder="Length" name="length-cable">
+                </div>
+              </div>
+              <div id = "ifOpticalFibre" class = "form-group" style="display: none;">
+                    <label class="control-label col-sm-2" for="cores-cable">Cores: </label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="cores-cable" placeholder="Cores" name="cores-cable">
+                    </div>
+              </div>
+              <div class = "form-group">
+                    <label class="control-label col-sm-2" for="connector-cable">Connector Types: </label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="connector-cable" placeholder="Connector Types" name="connector-cable">
+                    </div>
+              </div>
+              <div class = "form-group">
+                    <label class="control-label col-sm-2" for="mode-cable">Mode: </label>
+                    <div class="col-sm-10">          
+                        <input type="text" class="form-control" id="mode-cable" placeholder="Mode" name="mode-cable">
+                    </div>
+              </div>
+              <div class = "form-group">
+                    <label class ="control-label col-sm-2" for="remarks">Remarks:</label>
+                    <!-- <textarea class="form-control" rows="5" id="remarks"></textarea> -->
+                    <input class="form-control input-lg" id="remarks-cables" type="text">
+            </div>
+          </div>
+
+          <!-- if hardware is selected -->
+          <div id = "ifHardware" style = "display:none;">
+                <div class = "form-group">
+                        <label class="control-label col-sm-2" for="name-hardware">Name: </label>
+                        <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="name-hardware" placeholder="Name" name="name-hardware">
+                        </div>
+                </div>
+                <div class = "form-group">
+                        <label class="control-label col-sm-2" for="port-hardware">Ports: </label>
+                        <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="port-hardware" placeholder="No. of Ports" name="ports-hardware">
+                        </div>
+                  </div>
+                  <div class = "form-group">
+                        <label class="control-label col-sm-2" for="mode-cable">Size: </label>
+                        <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="size-hardware" placeholder="Size" name="size-hardware">
+                        </div>
+                  </div>
+                  <div class = "form-group">
+                        <label class="control-label col-sm-2" for="type-hardware">Type: </label>
+                        <div class="col-sm-10">          
+                            <input type="text" class="form-control" id="type-hardware" placeholder="Type" name="type-hardware">
+                        </div>
+                  </div>
+                  <div class = "form-group">
+                        <label class="control-label col-sm-2" class ="control-label col-sm-2" for="remarks">Remarks:</label>
+                        <!-- <textarea class="form-control" rows="5" id="remarks"></textarea> -->
+                        <input class="form-control input-lg" id="remarks-hardware" type="text">
+                </div>
+
+          </div>
+        </div>
+          <!-- submit -->
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+          </div>
+        </form>
+      </div>
+</body>
+</html>
