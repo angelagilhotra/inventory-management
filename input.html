@@ -167,7 +167,12 @@
                 <div class = "form-group">
                     <label for="type-active" class ="control-label col-sm-2">Type: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "type-active" placeholder="Rack/ Tower ..." name="type-active">
+                        <!-- <input type="text" class = "form-control" id = "type-active" placeholder="Rack/ Tower ..." name="type-active"> -->
+                        <select name="type-active" id="type-active" class="form-control">
+                                <option value="" disabled selected>Select your option</option>
+                                <option value="rack">Rack</option>
+                                <option value="tower">Tower</option>
+                        </select>
                     </div>
                 </div>
                 <div class = "form-group">
@@ -185,7 +190,7 @@
                 <div class = "form-group">
                     <label for="function-active" class ="control-label col-sm-2">Generation: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "function-active" placeholder="Enter generation" name="function-active">
+                        <input type="number" class = "form-control" id = "function-active" placeholder="Enter generation" name="function-active">
                     </div>
                 </div>
             </div>
@@ -221,7 +226,12 @@
                 <div class = "form-group">
                     <label for="type-active" class ="control-label col-sm-2">Type: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "type-active" placeholder="Indoor/ Outdoor ... " name="type-active">
+                        <!-- <input type="text" class = "form-control" id = "type-active" placeholder="Indoor/ Outdoor ... " name="type-active"> -->
+                        <select name="type-active" id="type-active" class="form-control">
+                                <option value="" disabled selected>Select your option</option>
+                                <option value="indoor">Indoor</option>
+                                <option value="outdoor">Outdoor</option>
+                            </select>
                     </div>
                 </div>
             </div>
@@ -287,7 +297,12 @@
                 <div class = "form-group">
                     <label for="type-active" class ="control-label col-sm-2">Type: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "type-active" placeholder="Mono/ Color" name="type-active">
+                        <!-- <input type="text" class = "form-control" id = "type-active" placeholder="Mono/ Color" name="type-active"> -->
+                        <select name="type-active" id="type-active" class="form-control">
+                                <option value="" disabled selected>Select your option</option>
+                                <option value="mono">Mono</option>
+                                <option value="color">Color</option>
+                            </select>
                     </div>
                 </div>
                 <div class = "form-group">
@@ -320,7 +335,13 @@
                 <div class = "form-group">
                     <label for="type-active" class ="control-label col-sm-2">Type: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "type-active" placeholder="DLP/Lamp/LED ... " name="type-active">
+                        <!-- <input type="text" class = "form-control" id = "type-active" placeholder="DLP/Lamp/LED ... " name="type-active"> -->
+                        <select name="type-active" id="type-active" class="form-control">
+                                <option value="" disabled selected>Select your option</option>
+                                <option value="dlp">DLP</option>
+                                <option value="lamp">Lamp</option>
+                                <option value="led">LED</option>
+                            </select>
                     </div>
                 </div>
             </div>
@@ -355,7 +376,8 @@
                 <div class = "col-sm-10">
                     <!-- <input type="text" class = "form-control" id = "type-computers" placeholder="laptop/Desktop ..." name="type-computers"> -->
                     <select name="type-computers" id="type-computers" class="form-control">
-                        <option value="laptop">laptop</option>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="laptop">Laptop</option>
                         <option value="Desktop">Desktop</option>
                     </select>
                 </div>
@@ -363,7 +385,13 @@
             <div class = "form-group">
                     <label for="form-computers" class ="control-label col-sm-2">Form Factor: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "form-computers" placeholder="SFF/BTX/ITX ..." name="form-computers">
+                        <!-- <input type="text" class = "form-control" id = "form-computers" placeholder="SFF/BTX/ITX ..." name="form-computers"> -->
+                        <select name="form-computers" id="form-computers" class="form-control">
+                                <option value="" disabled selected>Select your option</option>
+                                <option value="sff">SFF</option>
+                                <option value="btx">BTX</option>
+                                <option value="itx">ITX</option>
+                        </select>
                     </div>
             </div>
             <div class = "form-group">
@@ -388,7 +416,7 @@
                             </div>
                             <label for="processor-speed-computers" class="col-md-1 control-label">Speed: </label>
                             <div class="col-md-2">
-                                <input type="text" class="form-control" id="processor-speed-computers" placeholder="3.3Ghz ...">
+                                <input type="number" class="form-control" id="processor-speed-computers" placeholder="3.3Ghz ...">
                             </div>
                         </div>
                     </div>
@@ -396,19 +424,19 @@
             <div class = "form-group">
                     <label for="ram-computers" class ="control-label col-sm-2">RAM: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "ram-computers" placeholder="RAM" name="ram-computers">
+                        <input type="number" class = "form-control" id = "ram-computers" placeholder="RAM" name="ram-computers">
                     </div>
             </div>
             <div class = "form-group">
                     <label for="hdd-computers" class ="control-label col-sm-2">Hard Disk: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "hdd-computers" placeholder="HDD" name="hdd-computers">
+                        <input type="number" class = "form-control" id = "hdd-computers" placeholder="HDD" name="hdd-computers">
                     </div>
             </div>
             <div class = "form-group">
                     <label for="monitor-computers" class ="control-label col-sm-2">Monitor Size: </label>
                     <div class = "col-sm-10">
-                        <input type="text" class = "form-control" id = "monitor-computers" placeholder="Monitor Size" name="monitor-computers">
+                        <input type="number" class = "form-control" id = "monitor-computers" placeholder="Monitor Size" name="monitor-computers">
                     </div>
             </div>
             <div class = "form-group">
