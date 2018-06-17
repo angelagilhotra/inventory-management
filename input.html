@@ -487,25 +487,36 @@
               <div class = "form-group">
                 <label class="control-label col-sm-2" for="length-cable">Length: </label>
                 <div class="col-sm-10">          
-                    <input type="text" class="form-control" id="length-cable" placeholder="Length" name="length-cable">
+                    <input type="number" class="form-control" id="length-cable" placeholder="Length" name="length-cable">
                 </div>
               </div>
               <div id = "ifOpticalFibre" class = "form-group" style="display: none;">
                     <label class="control-label col-sm-2" for="cores-cable">Cores: </label>
                     <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="cores-cable" placeholder="Cores" name="cores-cable">
+                        <input type="number" class="form-control" id="cores-cable" placeholder="Number of cores" name="cores-cable">
                     </div>
               </div>
               <div class = "form-group">
                     <label class="control-label col-sm-2" for="connector-cable">Connector Types: </label>
                     <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="connector-cable" placeholder="Connector Types" name="connector-cable">
+                        <!-- <input type="text" class="form-control" id="connector-cable" placeholder="Connector Types" name="connector-cable"> -->
+                        <select name="connector-cable" id="connector-cable" class="form-control">
+                                <option value="" disabled selected>Select your option</option>
+                                <option value="lctolc">LC/LC</option>
+                                <option value="lctosc">LC/SC</option>
+                                <option value="sctosc">SC/SC</option>
+                        </select>
                     </div>
               </div>
               <div class = "form-group">
                     <label class="control-label col-sm-2" for="mode-cable">Mode: </label>
                     <div class="col-sm-10">          
-                        <input type="text" class="form-control" id="mode-cable" placeholder="Mode" name="mode-cable">
+                        <!-- <input type="text" class="form-control" id="mode-cable" placeholder="SM/ MM" name="mode-cable"> -->
+                        <select name="mode-cable" id="mode-cable" class="form-control">
+                                <option value="" disabled selected>Select your option</option>
+                                <option value="singlemode">Single Mode (SM)</option>
+                                <option value="multimode">Multi Mode (MM)</option>
+                            </select>
                     </div>
               </div>
               <div class = "form-group">
