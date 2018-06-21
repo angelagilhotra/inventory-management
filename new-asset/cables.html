@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Cables</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>New Asset Form: Passive Cables</h2>
+        <br>
+        <form class="form-horizontal" method="post" action="passivecables.php">
+        <input type="hidden" name="activetype" value="Cables"/>
+            <div class="form-group">
+                        <label class="control-label col-sm-2">Type:</label>
+                        <div class="col-sm-10">
+                            <select name="cabletype" class="form-control" required>
+                                <option value="" disabled selected>Select your option</option>
+                                <option>Optical fibre</option>
+                                <option>Ethernet</option>
+                                <option>Patch cord</option>
+                                <option>Pigtail</option>
+                                <option>Computer Cable</option>
+                                <option>Audio-Video</option>
+                            </select>
+                        </div>
+                    </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="cablename" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Length:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="cablelength" required>
+                    </div>
+            </div>
+
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Core:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="cablecore" required>
+                    </div>
+            </div>
+
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Connector Type:</label>
+                    <div class="col-sm-10">
+                        <select name="cableconnector" class="form-control" required>
+                                        <option value="" disabled selected>Select your option</option>
+                                        <option>LC/LC</option>
+                                        <option>LC/SC</option>
+                                        <option>SC/SC</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="form-group">
+                        <label class="control-label col-sm-2">Mode:</label>
+                        <div class="col-sm-10">
+                            <select name="cablemode" class="form-control" required>
+                                            <option value="" disabled selected>Select your option</option>
+                                            <option>Single Mode (SM)</option>
+                                            <option>Multi Mode (MM)</option>
+                            </select>
+                        </div>
+                </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Remarks:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="cableremarks" >
+                </div>
+            </div>
+
+            <!-- submit -->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success" name="submitform">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

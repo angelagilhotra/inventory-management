@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Computer</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>New Asset Form: Computer</h2>
+        <br>
+        <form class="form-horizontal" method="post" action="Computerphp.php">
+            <input type="hidden" name="activetype" value="Computer"/>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Type:</label>
+                <div class="col-sm-10">
+                    <select name="type" class="form-control" required>
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="computer">Computer</option>
+                        <option value="laptop">Laptop</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2">Model:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="modeltype" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Make:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="maketype" required>
+                    </div>
+            </div>
+
+            <div class="form-group">
+                    <span class="col-md-2 control-label"><b>Processor: </b></span>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-md-1 control-label">Gen: </label>
+                            <div class="col-md-2">
+                                <input type="text" class="form-control" name="processtype" required>
+                            </div>
+                            <label class="col-md-1 control-label">Speed: </label>
+                            <div class="col-md-2">
+                                <input type="number" class="form-control" name="speedtype" required>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Generation:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="gentype" required>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Dimension:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="dimtype" required>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Operating System:</label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="ostype" required>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Hard Disk Size:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="sizetype" required>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2">RAM Size:</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="ramtype" required>
+                    </div>
+            </div>
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Form Factor:</label>
+                    <div class="col-sm-10">
+                        <select name="factor" class="form-control" required>
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="SFF">SFF</option>
+                            <option value="BTX">BTX</option>
+                            <option value="ITX">ITX</option>
+                        </select>
+                    </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Remarks:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="remarktype" required>
+                </div>
+            </div>
+
+            <!-- submit -->
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success" name="submitform">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

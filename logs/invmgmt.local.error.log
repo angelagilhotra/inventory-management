@@ -1,0 +1,1 @@
+[Wed Jun 20 15:32:26.477888 2018] [php7:notice] [pid 872:tid 1960] [client 127.0.0.1:50349] PHP Notice:  Undefined index: remarks-active in D:\\inv-mgmt\\inventory-management\\project\\networkingphp.php on line 31, referer: http://invmgmt.local/project/servers.html
