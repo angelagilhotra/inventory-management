@@ -27,6 +27,8 @@
             <a href="ups.php" class = "btn btn-primary">UPS</a>
         <br> 
         <hr>
+        <a href='../new-asset/input.html' class='btn btn-info'>Home</a>
+        <hr>
     <?php
 $count = 1;
 echo "<table class = 'table table-hover'>";
@@ -35,11 +37,8 @@ echo "
     <thead>
         <tr>
             <th>#</th>
-            <th>Name</th>
             <th>Make </th>
             <th>Model</th>
-            <th>Type</th>
-            <th>Specification</th>
             <th>Remarks</th>
         </tr>
     </thead>
@@ -79,7 +78,7 @@ try {
     // set the PDO error mode to exception
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     // echo "Connected successfully";
-    $stmt = $conn->prepare("SELECT `Name`, `Make`, `Model`, `Type`, `Specification`, `remarks` FROM `networking devices` WHERE `Name`='NMS'");
+    $stmt = $conn->prepare("SELECT `Make`, `Model`, `remarks` FROM `networking devices` WHERE `Name`='NMS'");
     $stmt->execute();
 
     // set the resulting array to associative

@@ -29,6 +29,8 @@
         <!-- </div> -->
         <br> 
         <hr>
+        <a href='../new-asset/input.html' class='btn btn-info'>Home</a>
+        <hr>
     <?php
 $count = 1;
 echo "<table class = 'table table-hover'>";
