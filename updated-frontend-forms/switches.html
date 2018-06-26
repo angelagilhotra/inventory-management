@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        function fixedOrModularCheck(that) {
+            if (that.value == "fixed") {
+                document.getElementById("ifFixed").style.display = "block";
+            } else {
+                document.getElementById("ifFixed").style.display = "none";
+            }
+            if (that.value == "modular") {
+                document.getElementById("ifModular").style.display = "block";
+            } else {
+                document.getElementById("ifModular").style.display = "none";
+            }
+        }
+    </script>
+    <title>Switches</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>New Asset Form: Switches</h2>
+        <br>
+        <form class="form-horizontal" method="post" action="">
+            <hr>
+            <h4>Configuration:</h4>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Type:</label>
+                <div class="col-sm-10">
+                    <select class="form-control" onclick="fixedOrModularCheck(this);">
+                        <option value="" disabled selected>Select your option</option>
+                        <option value="fixed">Fixed</option>
+                        <option value="modular">Modular</option>
+                    </select>
+                </div>
+            </div>
+            <hr>
+            <!-- to display if Fixed is selected -->
+            <div id="ifFixed" style="display:none;">
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Type of fixed switch:</label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="unmanaged">Unmanaged</option>
+                            <option value="smart">Smart</option>
+                            <option value="managed">Managed L2 and L3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Connectivity: </label>
+                    <div class="col-sm-10">
+                        <select class="form-control">
+                            <option value="" disabled selected>Select your option:</option>
+                            <option value="standalone">Standalone</option>
+                            <option value="stackable">Stackable</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Speed: </label>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <div class="col-md-2">
+                                <input type="number" class="form-control">
+                            </div>
+                            <label class="col-md-1 control-label">Unit: </label>
+                            <div class="col-md-4">
+                                <select class="form-control">
+                                    <option value="" disabled selected>Select your option</option>
+                                    <option value="gbps">GBPS</option>
+                                    <option value="mbps">MBPS</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Standard</label>
+                    <div class="col-md-6">
+                        <select class="form-control">
+                            <option value="" disabled selected>Select your option</option>
+                            <option value="poe">PoE</option>
+                            <option value="non-poe">Non - PoE</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Number of Ports:</label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <!-- to display if Modular is selected -->
+            <div id="ifModular" style="display:none;">
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Number of Slots:</label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Number of Ports:</label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2">Height (U):</label>
+                    <div class="col-md-10">
+                        <input type="number" class="form-control">
+                    </div>
+                </div>
+            </div>
+
+            <hr>
+            <h4>Remarks:</h4>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" name="">
+                </div>
+            </div>
+            <hr>
+            <!-- submit -->
+            <div class="form-group">
+                <div class=" col-sm-10">
+                    <button type="submit" class="btn btn-success" name="submitform">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

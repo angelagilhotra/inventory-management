@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>vga</title>
+	
+</head>
+
+<body>
+    <div class="container">
+        <h2>VGA(Video Graphic Array)Computer Cable</h2>
+        <br>
+        <form class="form-horizontal" method="post" action="">
+            <hr>
+            <h4>General:</h4>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="make">Brand: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="brand">
+                </div>
+            </div>
+			<div class="form-group">
+                <label class="control-label col-sm-2" for="model">Manufacture: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="manufacture">
+                </div>
+            </div>
+			<div class="form-group">
+                <label class="control-label col-sm-2" for="make">Manufacture Part Number: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="manfuctureno">
+                </div>
+            </div>
+            
+			<div class="form-group">
+                <label class="control-label col-sm-2" for="model">Model Year: </label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="modelyear">
+                </div>
+            </div>
+			<div class="form-group">
+                <label class="control-label col-sm-2" for="model"> Item Model Number: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="modelno">
+                </div>
+            </div>
+			
+            <hr>
+            <h4>Specification:</h4>
+			 <div class="form-group">
+                <label class="control-label col-sm-2">Types:</label>
+                <div class="col-sm-10">
+                    <input type="checkbox" name="type" value="rgb">RGB Connector 
+					<input type="checkbox" name="type" value="hd15">HD-15  
+					<input type="checkbox" name="type" value="mini015">Mini-015 
+					<input type="checkbox" name="type" value="minid15">Mini-D15 
+					<input type="checkbox" name="type" value="minisubd15">MiniSub-D15  
+					<input type="checkbox" name="type" value="hdb15">HDB-15 
+					<input type="checkbox" name="type" value="db">DB-15  <br>
+                </div>		
+          </div>
+			<div class="form-group">
+			<span class="col-md-2 control-label">
+                    <b>ITEM: </b>
+                </span>
+                
+				<div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-md-4 control-label">Width(mm): </label>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control" name="itemwidth">
+                        </div>
+                        <label class="col-md-4 control-label">Height(mm): </label>
+                        <div class="col-md-2">
+                          <input type="number" class="form-control" name="itemwidth"> 
+                        </div>
+                    </div>
+                </div>       
+                </div>
+			<div class="form-group">
+                <label class="control-label col-sm-2" for="model">Product Dimensions: </label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="dimension">
+                </div>
+            </div>
+	  
+		  <div class="form-group">
+                <label class="control-label col-sm-2">Pin:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="pin">
+                </div>		
+          </div>
+		  <div class="form-group">
+                <label class="control-label col-sm-2">Connector one(male):</label>
+                <div class="col-sm-10">
+                 <select>
+                    <option value="">select below</option>
+                    <option value="hd15">HD15</option>
+                    <option value="db13w3">DB13W3</option>
+                    <option value="4bnc">4BNC</option>
+					<option value="hd15/6">HD15/6pin Mini-Din PSZUB</option>
+					<option value="other">others*</option>
+                    </select>
+                </div>
+            </div>
+			
+			<div class="form-group">
+                <label class="control-label col-sm-2">Connector two:</label>
+                <div class="col-sm-10">
+                 <select>
+                    <option value="">select below</option>
+                    <option value="hd15male">HD15-Male</option>
+					<option value="hd15female">HD15-Female</option>
+                    <option value="4bncmale">4BNC-Male</option>
+					<option value="5bncfemale">5BNC-Female</option>
+					<option value="hd15f/6">HD15 female/6pin Mini-Din PS2 male</option>
+					<option value="hd15fuse">HD15 female/USE B male</option>
+					<option value="other">others*</option>
+                    </select>
+                </div>
+            </div>
+		  
+            <div class="form-group">
+                <label class="control-label col-sm-2">Length(in feet):</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="length">
+                </div>
+            </div>
+ 
+			<hr>
+            <div class="form-group">
+                    <label class="control-label col-sm-2">Remarks*</label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="remarks">
+                    </div>
+                </div>
+        </form>
+		
+		<br>
+		  <div class="col-sm-offset-2 col-sm-10">
+              <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+		</div>
+    
+</body>
+
+</html>

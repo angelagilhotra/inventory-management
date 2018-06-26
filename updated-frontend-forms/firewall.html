@@ -8,26 +8,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        function checkField(functionactive) {
-            if (/[^0-9a-bA-B\s]/gi.test(functionactive.value)) {
+    <!-- <script type="text/javascript">
+        function checkField(modelactive) {
+            if (/[^0-9a-bA-B\s]/gi.test(modelactive.value)) {
                 alert("only alphanumeric characters spaces are valid");
-                functionactive.value = "";
-                functionactive.focus();
+                modelactive.value = "";
+                modelactive.focus();
                 return false;
             }
         }
-    </script>
-    <title>Server</title>
+    </script> -->
+    <title>Firewall</title>
 </head>
 
 <body>
     <div class="container">
-        <h2>New Asset Form: Servers</h2>
+        <h2>New Asset Form: Firewall</h2>
         <br>
         <form class="form-horizontal" method="post" action="networkingphp.php">
             <input type="hidden" name="assettype" value="activeother" />
-            <input type="hidden" name="activetype" value="server" />
+            <input type="hidden" name="activetype" value="Firewall" />
 
             <div class="form-group">
                 <label class="control-label col-sm-2">Make:</label>
@@ -37,37 +37,21 @@
             </div>
 
             <div class="form-group">
-                <label class="control-label col-sm-2">Ports:</label>
+                <label class="control-label col-sm-2">Model:</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" name="typeactive" required>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-sm-2">Type:</label>
-                <div class="col-sm-10">
-                    <!-- <input type="text" class="form-control" name="modelactive" required> -->
-                    <select name="modelactive" class="form-control">
-                        <option value="" disabled selected>Select an option</option>
-                        <option value="rack">Rack Server</option>
-                        <option value="tower">Tower Server</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="form-group">
-                <label class="control-label col-sm-2">Generation:</label>
-                <div class="col-sm-10">
-                    <input type="number" class="form-control" name="functionactive" >
+                    <input type="text" class="form-control" name="modelactive" id="modelactive" onblur="checkField(this)" required>
                 </div>
             </div>
 
             <div class="form-group">
                 <label class="control-label col-sm-2">Remarks:</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" name="remarksactive" >
+                    <input type="text" class="form-control" name="remarksactive">
                 </div>
             </div>
+
+            <input type="hidden" name="functionactive" value="" />
+            <input type="hidden" name="typeactive" value="" />
 
             <!-- submit -->
             <div class="form-group">

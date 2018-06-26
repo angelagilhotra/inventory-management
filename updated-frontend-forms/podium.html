@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>Podium</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>New Asset Form: Podium</h2>
+        <br>
+        <form class="form-horizontal" method="post" action="">
+            <hr>
+            <h4>General:</h4>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="make">Make: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="make">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="model">Model Number: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="model">
+                </div>
+            </div>
+            <hr>
+            <h4>System Specifications:</h4>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="model">Monitor Size: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="model">
+                </div>
+            </div>
+            <div class="form-group">
+                <span class="col-md-2 control-label">
+                    <b>Processor: </b>
+                </span>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-md-1 control-label">Count: </label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control">
+                        </div>
+                        <label class="col-md-1 control-label">Type: </label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control">
+                        </div>
+                        <label class="col-md-2 control-label">Speed(GHz): </label>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">RAM Size:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="gentype">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Memory Type:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="gentype">
+                </div>
+            </div>
+            <div class="form-group">
+                <span class="col-md-2 control-label">
+                    <b>Hard Disk: </b>
+                </span>
+                <div class="col-md-6">
+                    <div class="form-group row">
+                        <label class="col-md-1 control-label">Size: </label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control">
+                        </div>
+                        <label class="col-md-1 control-label">Type: </label>
+                        <div class="col-md-2">
+                            <input type="text" class="form-control">
+                        </div>
+                        <label class="col-md-2 control-label">Interface: </label>
+                        <div class="col-md-2">
+                            <input type="number" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Supported Operating System:</label>
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Windows 7</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Windows Vista</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Windows XP</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Windows 2000</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Linux</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h4>Power: </h4>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Power Consumption:</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" name="gentype">
+                </div>
+            </div>
+            <hr>
+            <h4>Built-in Features:</h4>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Select all that apply:</label>
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Speakers</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">AV Switcher</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Touch Interface</label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2">Interface for:</label>
+                <div class="col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Power</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Audio</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">USB</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">Net</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">VGA</label>
+                    </div>
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" value="">HDMI Port</label>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <h4>Remarks:</h4>
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" name="">
+                </div>
+            </div>
+            <hr>
+            <!-- submit -->
+            <div class="form-group">
+                <div class=" col-sm-10">
+                    <button type="submit" class="btn btn-success" name="submitform">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
