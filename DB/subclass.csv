@@ -1,0 +1,12 @@
+sub_class_code,description
+EAC,"Electronic Accessories"
+EAP,"Electronic Appliances"
+ECP,"Electronic Components"
+OFS,"Office Supplies"
+FUR,Furniture
+ITC,"IT - Computers"
+ITN,"IT - Networking"
+ITH,"IT - Hardware"
+ITS,"IT - Software"
+CLC,"Chemistry Lab - Chemicals"
+CLE,"Chemistry Lab - Equipments"
